@@ -1,0 +1,7 @@
+{
+  "name": "Foodship-api",
+  "description": "Foodship API Server",
+  "image": "heroku/python",
+  "repository": "https://git.heroku.com/berkeley-foodship-api",
+  "keywords": ["python", "flask" ]
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Success</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="/static/css/blog.css">
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">	
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" type="text/css">
+		<link href="../static/css/carousel.css" rel="stylesheet">		
+	</head>
+	<body>
+		<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse bg-faded fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<span class="navbar-brand" style="font-family: Raleway"> Foodship</span>
+					<button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#hamberger" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="hamberger">
+					<div class="nav navbar-nav">
+						<a class="nav-item nav-link" href="/browse">Home </a>
+      					<a class="nav-item nav-link" href="/history">View Your Meal</a>
+      					<a class="nav-item nav-link" href="/own">Find A Match</a>
+      				</div>
+				</div>
+				<div class="nav navbar-nav" style="color:white;width:250px;text-align:right">
+      				<span> Welcome&nbsp&nbsp</span><span>{{ user|safe}}</span>
+      			</div>
+			</div>
+		</nav>
+		<div style="background-color:grey;height:600px">
+			<div class="container">
+				<h2 style="font:Raleway;text-align:center;color:white">
+				<p style="padding-top:100px;padding-bottom:10px">
+					Congratulations! Your dining meal has been created.
+				</p>
+				<p>We will notify you through email when somebody joins your meal!</p>
+				</h2>
+				<h2 style="font:Raleway;text-align:center;color:white">
+					<p style="padding-top:80px;padding-bottom:10px">
+					You can also check <a href="/history">'View Your Meal'</a> to see the status
+					</p>
+				</h2>
+			</div>
+		</div>
+		<!-- MAIN CONTENT HERE -->
+	    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="/static/js/bootstrap.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Recommendation</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="/static/css/blog.css">
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">	
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" type="text/css">
+		<link href="../static/css/carousel.css" rel="stylesheet">		
+	</head>
+	<body>
+		<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse bg-faded fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<span class="navbar-brand" style="font-family: Raleway"> Foodship</span>
+					<button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#hamberger" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="hamberger">
+					<div class="nav navbar-nav">
+						<a class="nav-item nav-link" href="/browse">Home </a>
+      					<a class="nav-item nav-link" href="/history">View Your Meal</a>
+      					<a class="nav-item nav-link" href="/own">Find A Match</a>
+      				</div>
+				</div>
+				<div class="nav navbar-nav" style="color:white;width:250px;text-align:right">
+      				<span> Welcome&nbsp&nbsp</span><span>{{ user|safe}}</span>
+      			</div>
+			</div>
+		</nav>
+		<div style="background-color:grey;position:absolute;width:100%;height:90%">
+			<div class="container">
+				<div style="padding-top:45px;padding-bottom:25px;text-align:center">
+					<h1 style="color:white;font-family:Raleway">Here's what we've found for you</h1>
+				</div>
+				<div class="row" style="text-align:center">
+					<div class="col-lg-4 col-sm-6">
+						<div class="img_wrap">
+						  <img src="/static/pics/spanish/5.jpg" alt="" id="rec-image1" class="img-responsive rounded image" style='width:100%;height:250px'/>
+						  <form action='/browse' class="middle" method="POST">
+						  	<input type="hidden" name="sequence" value="{{ sequence1 }}"/>
+							<div class="text">{{pic1.name}}</div>
+							<div class="text">is hosting a</div>
+							<div class="text"><span>{{pic1.price}}&nbsp</span><span id="rec-food1">{{pic1.food}}</span><span> {{ pic1.meal }}</span></div>
+							<div class="text"><span>at </span><span>{{pic1.time}}</span></div>
+							<div style="padding:5px"></div>
+							<button class="btn btn-primary text" style="width:100px" type="submit" >Join</button>
+						  </form>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<div class="img_wrap">
+						  <img src="/static/pics/italian/2.jpg" alt="" id="rec-image2" class="img-responsive rounded image" style='width:100%;height:250px'/>
+						  <form action='/browse' class="middle" method="POST">
+						  	<input type="hidden" name="sequence" value="{{ sequence2 }}"/>
+							<div class="text">{{pic2.name}}</div>
+							<div class="text">is hosting a</div>
+							<div class="text"><span>{{pic2.price}}&nbsp</span><span id="rec-food2">{{pic2.food}}</span><span> {{ pic2.meal }}</span></div>
+							<div class="text"><span>at </span><span>{{pic2.time}}</span></div>
+							<div style="padding:5px"></div>
+							<button class="btn btn-primary text" style="width:100px" type="submit" >Join</button>
+						  </form>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<div class="img_wrap">
+						  <img src="/static/pics/thai/3.jpg" alt="" id="rec-image3" class="img-responsive rounded image" style='width:100%;height:250px'/>
+						  <form action='/browse' class="middle" method="POST">
+						  	<input type="hidden" name="sequence" value="{{ sequence3 }}"/>
+							<div class="text">{{pic3.name}}</div>
+							<div class="text">is hosting a</div>
+							<div class="text"><span>{{pic3.price}}&nbsp</span><span id="rec-food3">{{pic3.food}}</span><span> {{ pic3.meal }}</span></div>
+							<div class="text"><span>at </span><span>{{pic3.time}}</span></div>
+							<div style="padding:5px"></div>
+							<button class="btn btn-primary text" style="width:100px" type="submit" >Join</button>
+						  </form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div style="padding-top:45px;text-align:center">
+					<h2 style="color:white;font-family:Raleway">Not what you want?</h1>
+				</div>
+	          	<div style="padding-left:40%;padding-right:40%;padding-top:10px">
+	          		<form action='/new' method="POST">
+		          		<input type="hidden" name="cuisine" value="{{ cuisine }}"/>
+		          		<input type="hidden" name="day" value="{{ day }}"/>
+		          		<input type="hidden" name="meal" value="{{ meal }}"/>
+		          		<input type="hidden" name="budget" value="{{ budget }}"/>
+		        		<button class="btn btn-lg btn-primary btn-block"  style="width:100%" type="submit" name="submit" id="submit">Create Your Own</button>
+		        	</form>
+		  	  	</div>
+		  	  	<div style="padding-top:20px;text-align:center">
+					<h5 style="color:white;font-family:Raleway">(The information you typed previously will be generated into the dining meal. Wait to be matched!)</h5>
+				</div>
+			</div>
+		</div>
+		<!-- MAIN CONTENT HERE -->
+	    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="/static/js/bootstrap.min.js"></script>
+		<script src="/static/js/recommend.js"></script>
+	</body>
+</html>

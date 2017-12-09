@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Browse</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="/static/css/blog.css">
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">	
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" type="text/css">		
+	</head>
+	<body>
+		<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse bg-faded fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<span class="navbar-brand" style="font-family: Raleway"> Foodship</span>
+					<button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#hamberger" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="hamberger">
+					<div class="nav navbar-nav">
+						<a class="nav-item nav-link" href="/browse">Home </a>
+      					<a class="nav-item nav-link" href="/history">View Your Meal</a>
+      					<a class="nav-item nav-link" href="/own">Find A Match</a>
+      				</div>
+				</div>
+				<div class="nav navbar-nav" style="color:white;width:250px;text-align:right">
+      				<span> Welcome&nbsp&nbsp</span><span>{{ user|safe}}</span>
+      			</div>
+			</div>
+		</nav>
+		<div style="height:40px">
+		</div>
+		<div class="container">
+			<div class="row" style="text-align:center">
+				<div class="col-lg-4 col-sm-6">
+					<div class="img_wrap">
+					  <img src="/static/pics/japanese/3.jpg" alt="" id="image1" class="img-responsive rounded image" style='width:100%;height:260px'/>
+					  <form action="/browse" class="middle" method="POST">
+					  	<input type="hidden" name="sequence" value="{{pic1.sequence}}"/>
+						<div class="text">{{pic1.name}}</div>
+						<div class="text">is hosting a</div>
+						<div class="text"><span>{{pic1.price}}&nbsp</span><span id="food1">{{pic1.food}}</span><span> meal</span></div>
+						<div class="text"><span>at </span><span>{{pic1.time}}</span></div>
+						<div style="padding:5px"></div>
+						<button class="btn btn-primary text" style="width:100px" type="submit" >Join</button>
+					  </form>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6">
+					<div class="img_wrap">
+					  <img src="/static/pics/indian/2.jpg" alt="" id="image2" class="img-responsive rounded image" style='width:100%;height:260px'/>
+					  <form action="/browse" class="middle" method="POST">
+					  	<input type="hidden" name="sequence" value="{{pic2.sequence}}"/>
+						<div class="text">{{pic2.name}}</div>
+						<div class="text">is hosting a</div>
+						<div class="text"><span>{{pic2.price}}&nbsp</span><span id="food2">{{pic2.food}}</span><span> meal</span></div>
+						<div class="text"><span>at </span><span>{{pic2.time}}</span></div>
+						<div style="padding:5px"></div>
+						<button class="btn btn-primary text" style="width:100px" type="submit" >Join</button>
+					  </form>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6">
+					<div class="img_wrap">
+					  <img src="/static/pics/thai/3.jpg" alt="" id="image3" class="img-responsive rounded image" style='width:100%;height:260px'/>
+					  <form action="/browse" class="middle" method="POST">
+					  	<input type="hidden" name="sequence" value="{{pic3.sequence}}"/>
+						<div class="text">{{pic3.name}}</div>
+						<div class="text">is hosting a</div>
+						<div class="text"><span>{{pic3.price}}&nbsp</span><span id="food3">{{pic3.food}}</span><span> meal</span></div>
+						<div class="text"><span>at </span><span>{{pic3.time}}</span></div>
+						<div style="padding:5px"></div>
+						<button class="btn btn-primary text" style="width:100px" type="submit" >Join</button>
+					  </form>
+					</div>
+				</div>
+			</div>
+			<div class="row" style="text-align:center;margin-top:30px">
+				<div class="col-lg-4 col-sm-6">
+					<div class="img_wrap">
+					  <img src="/static/pics/japanese/2.jpg" alt="" id="image4" class="img-responsive rounded image" style='margin-top:20px;width:100%;height:260px'/>
+					  <form action="/browse" class="middle" method="POST">
+					  	<input type="hidden" name="sequence" value="{{pic4.sequence}}"/>
+						<div class="text">{{pic4.name}}</div>
+						<div class="text">is hosting a</div>
+						<div class="text"><span>{{pic4.price}}&nbsp</span><span id="food4">{{pic4.food}}</span><span> meal</span></div>
+						<div class="text"><span>at </span><span>{{pic4.time}}</span></div>
+						<div style="padding:5px"></div>
+						<button class="btn btn-primary text" style="width:100px" type="submit" >Join</button>
+					  </form>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6">
+					<div class="img_wrap">
+					  <img src="/static/pics/ethiopian/3.jpg" alt="" id="image5" class="img-responsive rounded image" style='margin-top:20px;width:100%;height:260px'/>
+					  <form action="/browse" class="middle" method="POST">
+					  	<input type="hidden" name="sequence" value="{{pic5.sequence}}"/>
+						<div class="text">{{pic5.name}}</div>
+						<div class="text">is hosting a</div>
+						<div class="text"><span>{{pic5.price}}&nbsp</span><span id="food5">{{pic5.food}}</span><span> meal</span></div>
+						<div class="text"><span>at </span><span>{{pic5.time}}</span></div>
+						<div style="padding:5px"></div>
+						<button class="btn btn-primary text" style="width:100px" type="submit" >Join</button>
+					  </form>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6">
+					<div class="img_wrap">
+						<div style="padding-top:30px">Find A Match</div>
+						<a href="/own">
+					  	<img src="/static/pics/plus.png" alt="" id="image6" class="img-responsive rounded image2" style='width:90%;padding-left:10%;padding-bottom:5%;height:260px'/>
+					  </a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- MAIN CONTENT HERE -->
+		<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+		<script src="/static/js/load.js"></script>
+		<script src="/static/js/script.js"></script>
+	</body>
+</html>

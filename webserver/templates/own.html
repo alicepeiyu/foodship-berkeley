@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Own</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="/static/css/blog.css">
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">	
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" type="text/css">
+		<link href="/static/css/carousel.css" rel="stylesheet">		
+	</head>
+	<body>
+		<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse bg-faded fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<span class="navbar-brand" style="font-family: Raleway"> Foodship</span>
+					<button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#hamberger" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="hamberger">
+					<div class="nav navbar-nav">
+						<a class="nav-item nav-link" href="/browse">Home </a>
+      					<a class="nav-item nav-link" href="/history">View Your Meal</a>
+      					<a class="nav-item nav-link" href="/own">Find A Match</a>
+      				</div>
+				</div>
+				<div class="nav navbar-nav" style="color:white;width:250px;text-align:right">
+      				<span> Welcome&nbsp&nbsp</span><span>{{ user|safe}}</span>
+      			</div>
+			</div>
+		</nav>
+		<div class="jumbotron" style="position:absolute;background-color:grey;width:100%;height:90%">
+			<div class="container">
+				  <div class="container">
+				    <div style="padding-top:90px;text-align:center;color:white">
+				      <h1>A match is in your own hands</h1>
+				      <p style="padding-top:20px;font-family:Raleway">Didn't like our suggestions?</p>
+				      <p style="font-family:Raleway">Don't worry. Set your parameters and we'll find you a MATCH!</p>
+				    </div>
+				    <div class="form-group row">
+			            <div class="col-2">
+			              <img src="/static/pics/american/5.jpg" class="img-responsive img-thumbnail" style='width:100%;height:150px'>
+			            </div>
+			           	<div class="col-2">
+			              <img src="/static/pics/spanish/2.jpg" class="img-responsive img-thumbnail" style='width:100%;height:150px'>
+			            </div>
+			            <div class="col-2">
+			              <img src="/static/pics/chinese/1.jpg" class="img-responsive img-thumbnail" style='width:100%;height:150px'>
+			            </div>
+			            <div class="col-2">
+			              <img src="/static/pics/french/5.jpg" class="img-responsive img-thumbnail" style='width:100%;height:150px'>
+			            </div>
+			            <div class="col-2">
+			              <img src="/static/pics/italian/4.jpg" class="img-responsive img-thumbnail" style='width:100%;height:150px'>
+			            </div>
+			          	<div class="col-2">
+			              <img src="/static/pics/mexican/3.jpg" class="img-responsive img-thumbnail" style='width:100%;height:150px'>
+			            </div>
+			        </div>
+			        <div style="padding-left:45%;padding-right:45%;padding-top:20px">
+			        	<button class="btn btn-lg btn-primary btn-block"  style="width:100%" onclick="window.location.href='/create'">Start</button>
+				  	</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
